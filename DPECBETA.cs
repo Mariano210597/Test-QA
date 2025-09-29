@@ -10,9 +10,9 @@ public class ahora : PageTest
     { 
         await Page.GotoAsync("https://autogestion-beta.dpec.com.ar/turnos/registrarturno");
 
-        await Page.GetByPlaceholder("E-mail").FillAsync("mariano210597@gmail.com");
+        await Page.GetByPlaceholder("E-mail").FillAsync("m");
 
-        await Page.GetByPlaceholder("Contraseña").FillAsync("Pascualin2105");
+        await Page.GetByPlaceholder("Contraseña").FillAsync("Pas");
 
         await Page.GetByRole(AriaRole.Button, new() { Name = "INGRESAR", Exact = true }).ClickAsync();
 
@@ -27,13 +27,13 @@ public class ahora : PageTest
 
         await Page.GetByLabel("Nro de usuario/cliente").ClickAsync();
 
-        await Page.GetByLabel("Nro de usuario/cliente").FillAsync("30129963");
+        await Page.GetByLabel("Nro de usuario/cliente").FillAsync("2222");
 
         await Page.GetByLabel("Nro de usuario/cliente").PressAsync("Tab");
 
         await Page.GetByLabel("Nro de medidor").ClickAsync();
 
-        await Page.GetByLabel("Nro de medidor").FillAsync("3704229");
+        await Page.GetByLabel("Nro de medidor").FillAsync("3333");
 
         await Page.GetByRole(AriaRole.Button, new() { Name = " Siguiente" }).ClickAsync();
 
@@ -74,7 +74,7 @@ public class ahora : PageTest
 
         await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de la Tarjeta" }).ClickAsync();
 
-        await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de la Tarjeta" }).FillAsync("4507990000004905");
+        await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de la Tarjeta" }).FillAsync("111111111111111");
 
         await Page.GetByRole(AriaRole.Textbox, new() { Name = "Codigo de seguridad" }).ClickAsync();
 
@@ -113,14 +113,14 @@ public class ahora : PageTest
         await Page.WaitForTimeoutAsync(2000);
 
         await Page.Locator(".form-select.shadow").First.SelectOptionAsync(values:"0");
-        await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"3704229");
+        await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"5555");
         await Page.WaitForTimeoutAsync(2000);
        
         await Page.Locator(".form-select.shadow").Nth(1).SelectOptionAsync(values:"2");
         await Page.GetByRole(AriaRole.Button, new() { Name = "Crear Reclamo Baja tensión" }).ClickAsync();
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         await Page.GetByRole(AriaRole.Button, new() { Name = "Ver Reclamos Técnicos" }).ClickAsync();
-        await Page.GetByRole(AriaRole.Combobox).SelectOptionAsync(new[] { "3704229" });
+        await Page.GetByRole(AriaRole.Combobox).SelectOptionAsync(new[] { "333" });
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
         await Page.GetByRole(AriaRole.Button, new() { Name = "Cerrar Reclamo " }).ClickAsync();
         await Page.GetByRole(AriaRole.Link, new() { Name = " Inicio" }).ClickAsync();  
@@ -133,7 +133,7 @@ public class ahora : PageTest
         await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"0");
 
 
-        await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"3704229");
+        await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"3333");
         
         await Page.WaitForTimeoutAsync(2000);
 
@@ -149,7 +149,7 @@ public class ahora : PageTest
 
         await Page.WaitForTimeoutAsync(2000);
 
-        await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"3704229");
+        await Page.Locator(".form-select.shadow").SelectOptionAsync(values:"3333");
 
         await Page.GetByRole(AriaRole.Link, new() { Name = " Inicio" }).ClickAsync();  
 
