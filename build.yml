@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-    name: Build, Test & SonarCloud
     runs-on: windows-latest
 
     steps:
@@ -30,8 +29,7 @@ jobs:
 
       # 4️⃣ Iniciar análisis SonarCloud
       - name: Begin SonarCloud Analysis
-        run: |
-          dotnet sonarscanner begin /k:"Mariano210597_Test-QA" /o:"mariano210597" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
+        run: dotnet sonarscanner begin /k:"Mariano210597_Test-QA" /o:"mariano210597" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml"
 
       # 5️⃣ Build del proyecto
       - name: Build
