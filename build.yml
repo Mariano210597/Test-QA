@@ -19,7 +19,7 @@ jobs:
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '7.x'   # cambia a la versión que uses
+          dotnet-version: '7.x'   # tu versión de .NET
 
       - name: Build
         run: dotnet build --configuration Release
@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: 17
-          distribution: 'temurin'   # o 'zulu'
+          distribution: 'temurin'
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
