@@ -10,7 +10,7 @@ public class Pagos : PageTest
     {
         await Page.GotoAsync("https://autogestion-beta.dpec.com.ar/turnos/registrarturno");
 
-        await Page.GetByPlaceholder("E-mail").FillAsync("mariano210597@gmail.com");
+        await Page.GetByPlaceholder("E-mail").FillAsync("mariano2");
 
         await Page.GetByPlaceholder("Contraseña").FillAsync("Pascualin2105");
 
@@ -23,7 +23,7 @@ public class Pagos : PageTest
         
         await Page.GetByRole(AriaRole.Link, new() { Name = " Mis medidores" }).ClickAsync();
 
-        await Page.GetByRole(AriaRole.Cell, new() { Name = "GARCIA GABRIEL ALEJANDRO  Ver detalles  Editar datos de referencia" }).GetByRole(AriaRole.Button, new() { Name = " Ver detalles" }).ClickAsync();
+        await Page.GetByRole(AriaRole.Cell, new() { Name = "  ALEJANDRO  Ver detalles  Editar datos de referencia" }).GetByRole(AriaRole.Button, new() { Name = " Ver detalles" }).ClickAsync();
 
         await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 
@@ -49,11 +49,11 @@ public class Pagos : PageTest
 
         await Page.GetByRole(AriaRole.Textbox, new() { Name = "Titular (como aparece en la Tarjeta)" }).ClickAsync();
 
-        await Page.GetByRole(AriaRole.Textbox, new() { Name = "Titular (como aparece en la Tarjeta)" }).FillAsync("mariano vivaldo");
+        await Page.GetByRole(AriaRole.Textbox, new() { Name = "Titular (como aparece en la Tarjeta)" }).FillAsync("mariano");
 
         await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de la Tarjeta" }).ClickAsync();
 
-        await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de la Tarjeta" }).FillAsync("4507990000004905");
+        await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de la Tarjeta" }).FillAsync("1111111");
 
         await Page.GetByRole(AriaRole.Textbox, new() { Name = "Codigo de seguridad" }).ClickAsync();
 
@@ -73,7 +73,7 @@ public class Pagos : PageTest
 
         await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de Identificación" }).ClickAsync();
 
-        await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de Identificación" }).FillAsync("40420421");
+        await Page.GetByRole(AriaRole.Spinbutton, new() { Name = "Número de Identificación" }).FillAsync("222222");
 
         await Page.GetByRole(AriaRole.Button, new() { Name = "Pagar" }).ClickAsync();
 
